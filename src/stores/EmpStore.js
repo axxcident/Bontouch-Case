@@ -8,9 +8,23 @@ export const useEmployeeStore = defineStore('employeeStore', {
       { id: 2, namn: "andreas", efter: "valegard", company: "Bontouch AB", email: `@bontouch.com`, isFav: false },
       { id: 3, namn: "isabella", efter: "gross", company: "Bontouch AB", email: `@bontouch.com`, isFav: false },
       { id: 4, namn: "nicklas", efter: "ansman", company: "Bontouch AB", email: `@bontouch.com`, isFav: false },
-    ]
+    ],
+    albums: []
   }),
   getters: {
+
+    async getAlbums() {
+
+      const res = await fetch('https://jsonplaceholder.typicode.com/users/1/albums')
+      const data = await res.json()
+      this.albums = data
+      // for (let i = 0; i < this.employees.length; i++) {
+      //   this.employees[i].albums.push(data)
+      // }
+      // this.employees.forEach((index, employee) => {
+      //   this.employees[index].albums = data.filter(album => album.userId === employee.id)
+      // })
+    },
     favoriter() {
       return this.employees.filter(tas => tas.isFav)
     },

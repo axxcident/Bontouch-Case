@@ -36,6 +36,8 @@ export default {
   setup() {
     const EmpStore = useEmployeeStore()
 
+    EmpStore.getAlbums
+
     return { EmpStore }
   }
 }
