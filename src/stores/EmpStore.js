@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-
+import { ref } from 'vue'
 
 export const useEmployeeStore = defineStore('employeeStore', {
   state: () => ({
@@ -9,6 +9,8 @@ export const useEmployeeStore = defineStore('employeeStore', {
       { id: 3, namn: "isabella", efter: "gross", company: "Bontouch AB", email: `@bontouch.com`, isFav: false },
       { id: 4, namn: "nicklas", efter: "ansman", company: "Bontouch AB", email: `@bontouch.com`, isFav: false },
     ],
+    countUser: ref(0),
+    currentUser: Number,
     albums: []
   }),
   getters: {
@@ -38,12 +40,23 @@ export const useEmployeeStore = defineStore('employeeStore', {
     },
     totalUppgifter: (state) => {
       return state.employees.length;
-    }
+    },
+    // getCurrentUser() {
+    //   return state.employees.countUser
+    // }
   },
+  // setters: {
+  //   setCountUser(count) {
+  //     state.employees.countUser = count
+  //   }
+  // },
   actions: {
     ToggleFavEmployee(id) {
       const favvoemployees = this.employees.find(t => t.id === id)
       favvoemployees.isFav = !favvoemployees.isFav
+    },
+    setCurrentUser(id) {
+      this.employees.currentUser = id;
     }
   }
 })

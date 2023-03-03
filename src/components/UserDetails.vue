@@ -1,7 +1,9 @@
 <template>
   <div class="task">
-    <div class="namninfo" @click="userPage(parseInt(siffra))">
-      <!-- <RouterLink to="/user/id"></RouterLink> -->
+    <!-- @click="userPage(empl.id)" -->
+    <div class="namninfo">
+      <RouterLink :to="`/user/${empl.id}`">Länk till rymden</RouterLink>
+      <!-- <RouterLink :to="{ name: 'UserView', params: { emplId: empl.id } }">Länk till rymden</RouterLink> -->
       <h3>{{ empl.namn }}</h3>
       <h4>{{ empl.company }}</h4>
       <h5>{{ empl.namn }}.{{ empl.efter }}{{ empl.email }}</h5>
@@ -12,31 +14,18 @@
 
 <script>
 import { useEmployeeStore } from '../stores/EmpStore';
-import { RouterLink, useRouter } from 'vue-router'
+import { RouterLink } from 'vue-router'
 
 export default {
-  // props: ["empl"],
   props: {
     empl: {
       type: Object,
       required: true
     }
   },
-  data() {
-    return {
-      siffra: this.empl.id
-    }
-  },
   setup() {
     const EmpStore = useEmployeeStore();
-    const router = useRouter();
-    const userPage = (id) => {
-      parseInt(id)
-      router.push(`/user/${id}`);
-      console.log(`/user/${id}`);
-    };
-    return { EmpStore, userPage };
-  },
-  components: { RouterLink }
+    return { EmpStore, sista };
+  }
 }
 </script>

@@ -11,13 +11,13 @@
     <div class="task-list">
       <h2>Favorites</h2>
       <div v-for="empl in EmpStore.favoriter">
-        <UserDetails :empl="empl" />
+        <UserDetails :empl="empl" :key="empl.id" />
       </div>
     </div>
     <div class="task-list">
       <h2>Users</h2>
       <div v-for="empl in EmpStore.nonfavvos">
-        <UserDetails :empl="empl" />
+        <UserDetails :empl="empl" :key="empl.id" />
       </div>
     </div>
 

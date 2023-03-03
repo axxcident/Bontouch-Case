@@ -15,13 +15,11 @@ const router = createRouter({
       path: '/user/:id',
       name: 'user',
       component: UserView,
-      props: true
     },
     {
       path: '/user/:id/album/:nr',
       name: 'album',
       component: AlbumView,
-      props: true
     }
   ]
 })
