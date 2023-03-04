@@ -12,12 +12,19 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/user/:id',
+      path: '/user/:userId',
       name: 'user',
       component: UserView,
+      children: [
+        {
+          path: 'albums/:albumId',
+          name: 'album',
+          component: AlbumView
+        }
+      ]
     },
     {
-      path: '/user/:id/album/:nr',
+      path: '/user/:userId/albums/:albumId',
       name: 'album',
       component: AlbumView,
     }

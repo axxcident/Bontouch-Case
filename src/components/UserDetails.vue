@@ -25,7 +25,7 @@ export default {
   },
   setup() {
     const EmpStore = useEmployeeStore();
-    return { EmpStore, sista };
+    return { EmpStore };
   }
 }
 </script>
