@@ -1,7 +1,7 @@
 <template>
   <!-- Breadcrumb Navigation -->
-  <p> $route.params här: {{ $route.params }}</p>
-  <p> $route.params.id här: {{ $route.params.id }}</p>
+  <!-- <p> $route.params här: {{ $route.params }}</p>
+  <p> $route.params.id här: {{ $route.params.id }}</p> -->
   <nav class="breadcrumb">
     <RouterLink to="/">Users</RouterLink>
     <div class="userbreadcrumb" v-if="$route.params.userId">
