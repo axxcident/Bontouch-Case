@@ -1,18 +1,15 @@
 <template>
-  <div class="task">
-    $route.params.userId: {{ $route.params.userId }}
-  </div>
-  <div class="task">
-    <h3>{{ employees[$route.params.userId - 1].namn }} {{ employees[$route.params.userId - 1].efter }}</h3>
-  </div>
-  <div class="italic section">
-    <p>Bontouch AB</p>
-    <p>{{ employees[$route.params.userId - 1].namn }}.{{ employees[$route.params.userId - 1].efter }}{{
-      employees[$route.params.userId - 1].email }}</p>
-    <p>Kungsgatan 55, 111 22, Stockholm</p>
-  </div>
-  <h4>Albums</h4>
-  <div class="albums">
+  <header>
+    <h1>{{ employees[$route.params.userId - 1].namn }} {{ employees[$route.params.userId - 1].efter }}</h1>
+    <div class="italic-section">
+      <p>Bontouch AB</p>
+      <p>{{ employees[$route.params.userId - 1].namn }}.{{ employees[$route.params.userId - 1].efter }}{{
+        employees[$route.params.userId - 1].email }}</p>
+      <p>Kungsgatan 55, 111 22, Stockholm</p>
+    </div>
+  </header>
+  <h2 class="albums">Albums</h2>
+  <div class="task-list">
     <AlbumDetails v-for="(alb, index) in albums" :key="index" :title="alb.title" :id="alb.id" />
   </div>
 </template>
@@ -34,6 +31,3 @@ export default {
   }
 }
 </script>
-
-    <!-- <AlbumDetails v-for="employ in EmpStore.employees" :album="employ.albums[0][0].title" /> -->
-    <!-- :album="EmpStore.employees[Number(id) - 1].albums[0][0].title"/> -->

@@ -3,7 +3,6 @@
     <p> {{ title }}</p>
     <button @click="testet(id)">test</button>
     <RouterLink :to="`/user/${$route.params.userId}/albums/${id}`">Länk till rymden</RouterLink>
-    <!-- <RouterLink :to="{ name: 'album', params: { userId: $route.params.userId, albumId: id } }"> album titel </RouterLink> -->
     <p> {{ id }}</p>
   </div>
 </template>

@@ -10,6 +10,11 @@ body * {
   font-family: "Poppins";
 }
 
+a {
+  text-decoration: none;
+  color: #444;
+}
+
 .breadcrumb {
   background-color: #e7e7e7;
   border-radius: 7px;
@@ -83,6 +88,23 @@ header h2 {
   padding-top: 25px;
   margin-left: 15px;
   color: #777;
+}
+
+header .italic-section {
+  display: flex;
+}
+
+header .italic-section p {
+  font-style: italic;
+  font-size: .8rem;
+  margin: auto 10px;
+}
+
+.albums {
+  display: flex;
+  justify-self: flex-start;
+  max-width: 640px;
+  margin: 30px auto 10px;
 }
 
 .photos {
