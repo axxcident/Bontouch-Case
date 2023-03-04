@@ -1,14 +1,10 @@
 <template>
-  <div class="task">
+  <RouterLink class="task" :to="`/user/${$route.params.userId}/albums/${id}`">
     <p> {{ title }}</p>
-    <button @click="testet(id)">test</button>
-    <RouterLink :to="`/user/${$route.params.userId}/albums/${id}`">Länk till rymden</RouterLink>
-    <p> {{ id }}</p>
-  </div>
+  </RouterLink>
 </template>
 
 <script>
-// import { useRouter } from 'vue-router'
 import { useEmployeeStore } from '../stores/EmpStore'
 import { RouterLink } from 'vue-router'
 
@@ -21,14 +17,9 @@ export default {
       type: Number
     }
   },
-
   setup() {
     const EmpStore = useEmployeeStore()
-
-    const testet = (nr) => {
-      console.log(nr, typeof nr)
-    };
-    return { EmpStore, testet }
+    return { EmpStore }
   }
 }
 </script>

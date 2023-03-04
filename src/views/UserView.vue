@@ -9,7 +9,7 @@
     </div>
   </header>
   <h2 class="albums">Albums</h2>
-  <div class="task-list">
+  <div class="album-list">
     <AlbumDetails v-for="(alb, index) in albums" :key="index" :title="alb.title" :id="alb.id" />
   </div>
 </template>

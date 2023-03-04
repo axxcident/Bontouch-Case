@@ -66,6 +66,20 @@ a {
   align-items: center;
 }
 
+a.task {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.album-list {
+  max-width: 640px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
 .namninfo {
   cursor: pointer;
 }
