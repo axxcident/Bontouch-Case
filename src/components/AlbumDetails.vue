@@ -29,12 +29,6 @@ export default {
     const testet = (nr) => {
       console.log(nr, typeof nr)
     };
-    // const router = useRouter();
-    // const albumPage = (nr) => {
-    // parseInt(nr)
-    // router.push(`/user/${this.laggdags}/album${nr}`);
-    // console.log(`/user/${this.laggdags}/album/${nr}`);
-    // };
     return { EmpStore, testet }
   }
 }
