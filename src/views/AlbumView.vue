@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <header>
     <!-- $route.params här: { "userId": "1", "albumId": "1" } -->
-    <h5>{{ albums[$route.params.albumId - 1].title }}</h5>
-  </div>
+    <h2>{{ albums[$route.params.albumId - 1].title }}</h2>
+  </header>
 </template>
 
 <script>

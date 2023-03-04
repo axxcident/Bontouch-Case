@@ -10,6 +10,25 @@ body * {
   font-family: "Poppins";
 }
 
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.breadcrumb .userbreadcrumb {
+  display: flex;
+  align-items: center;
+  margin: auto 2%;
+}
+
+.breadcrumb .albumbreadcrumb {
+  display: flex;
+  align-items: center;
+  margin: auto 2%;
+}
+
 .favvo-list {
   border: 2px solid black;
   background-color: rgb(238, 153, 153);
@@ -44,4 +63,21 @@ body * {
 
 i {
   cursor: pointer;
+}
+
+header {
+  text-align: center;
+  background: #e7e7e7;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 2em;
+  padding-top: 25px;
+  margin-left: 15px;
+  color: #777;
 }
