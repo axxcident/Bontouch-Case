@@ -1,18 +1,16 @@
 <template>
   <header>
-    <!-- $route.params här: { "userId": "1", "albumId": "1" } -->
     <h2>{{ albums[$route.params.albumId - 1].title }}</h2>
     <p>{{ albums.length }} photos</p>
   </header>
   <div class="photos">
     <div class="photo" v-for="(album, index) in albums" @click="albumId(index)">
       <img src="../assets/helloWorld.jpg" :alt="album.title">
-      <!-- <p>600 x 600</p> -->
     </div>
-  </div>
-  <div class="popup">
-    <span>&times;</span>
-    <img src="../assets/helloWorld.jpg" :alt=altPlaceholder.value>
+    <img class="overlay-img" src="../assets/helloWorld.jpg" :alt="`{altPlaceholder.value}`"
+      :style="{ display: showImage ? 'block' : 'none' }">
+    <span class="exitspan" @click="showImage = !showImage">&times;</span>
+    <div class="popup" :style="{ display: showImage ? 'block' : 'none' }" @click="klickas"></div>
   </div>
 </template>
 
@@ -25,14 +23,19 @@ export default {
     const EmpStore = useEmployeeStore()
     const { employees, albums } = storeToRefs(EmpStore)
 
+    let showImage = ref(false)
     let altPlaceholder = ref("")
     function albumId(indexet) {
       altPlaceholder.value = this.albums[indexet].title;
-      console.log(this.albums[indexet].title)
-      console.log(altPlaceholder.value)
+      showImage.value = !showImage.value
     }
 
-    return { EmpStore, employees, albums, altPlaceholder, albumId }
+    function klickas() {
+      console.log("klickas outside")
+      showImage.value = !showImage.value
+    }
+
+    return { EmpStore, employees, albums, altPlaceholder, albumId, showImage, klickas }
   }
 }
 </script>
