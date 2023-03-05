@@ -5,13 +5,13 @@
   <nav class="breadcrumb">
     <RouterLink to="/">Users</RouterLink>
     <div class="userbreadcrumb" v-if="$route.params.userId">
-      <p> / </p>
+      <p class="spaceslash"> / </p>
       <RouterLink :to="`/user/${$route.params.userId}`">{{ employees[$route.params.userId - 1].namn }} {{
         employees[$route.params.userId - 1].efter }}
       </RouterLink>
     </div>
     <div class="albumbreadcrumb" v-if="$route.params.albumId">
-      <p> / </p>
+      <p class="spaceslash"> / </p>
       <RouterLink :to="`/user/${$route.params.userId}/albums/${$route.params.albumId}`">{{
         albums[$route.params.albumId - 1].title }}</RouterLink>
     </div>

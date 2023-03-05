@@ -7,10 +7,12 @@
     <div class="photo" v-for="(album, index) in albums" @click="albumId(index)">
       <img src="../assets/helloWorld.jpg" :alt="album.title">
     </div>
-    <img class="overlay-img" src="../assets/helloWorld.jpg" :alt="`{altPlaceholder.value}`"
+    <img class="overlay-img" src="../assets/helloWorld.jpg" :alt="`${altPlaceholder}`"
       :style="{ display: showImage ? 'block' : 'none' }">
-    <span class="exitspan" @click="showImage = !showImage">&times;</span>
+    <span class="exitspan" @click="showImage = !showImage"
+      :style="{ display: showImage ? 'block' : 'none' }">&times;</span>
     <div class="popup" :style="{ display: showImage ? 'block' : 'none' }" @click="klickas"></div>
+    <p class="alt-titel" :style="{ display: showImage ? 'block' : 'none' }"> {{ altPlaceholder || "album titel" }} </p>
   </div>
 </template>
 
