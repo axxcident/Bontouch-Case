@@ -14,30 +14,11 @@
 
 <script>
 import { storeToRefs } from 'pinia'
-// import { ref, onMounted, onUnmounted } from 'vue'
-// import { useRoute } from 'vue-router'
 import { useEmployeeStore } from '../stores/EmpStore'
 export default {
   setup() {
     const EmpStore = useEmployeeStore()
     const { employees, albums } = storeToRefs(EmpStore)
-
-    // const route = useRoute()
-    // const sak = ref(localStorage.getItem("UserAlbumRoutes") || route.fullPath)
-
-    // const handlePopstate = () => {
-    //   localStorage.setItem("UserAlbumRoutes", sak.value)
-    // }
-
-    // // Add event listener on component mount
-    // onMounted(() => {
-    //   window.addEventListener('popstate', handlePopstate)
-    // })
-
-    // // Remove event listener on component unmount
-    // onUnmounted(() => {
-    //   window.removeEventListener('popstate', handlePopstate)
-    // })
 
     return { EmpStore, employees, albums }
   }

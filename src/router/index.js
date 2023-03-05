@@ -14,14 +14,7 @@ const router = createRouter({
     {
       path: '/user/:userId',
       name: 'user',
-      component: UserView,
-      children: [
-        {
-          path: 'albums/:albumId',
-          name: 'album',
-          component: AlbumView
-        }
-      ]
+      component: UserView
     },
     {
       path: '/user/:userId/albums/:albumId',

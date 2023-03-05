@@ -21,14 +21,6 @@ export const useEmployeeStore = defineStore('employeeStore', {
     },
     nonfavvos() {
       return this.employees.filter(tas => !tas.isFav)
-    },
-    favvosTotal() {
-      return this.employees.reduce((prev, curr) => {
-        return curr.isFav ? prev + 1 : prev
-      }, 0)
-    },
-    totalUppgifter: (state) => {
-      return state.employees.length;
     }
   },
   actions: {
