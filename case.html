@@ -1,0 +1,96 @@
+<!doctype html>
+<html ng-app="btWebCase">
+  <head>
+    <meta charset="utf-8">
+    <title>Bontouch - Case</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+        body { padding: 50px; }
+        h1 { margin-bottom: 20px; }
+        img { max-width: 80%; }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+        <h1>Bontouch Case</h1>
+        <p>This test aims to validate your technical skills and code quality.</p>
+        <p>Please read the instructions carefully before starting on the case.</p>
+        <h2>The Mission</h2>
+        <p>We would like you to create a web application for displaying users and their photo albums.</p>
+        <p>You will most likely need 4-8 hours to finish this task, and we suspect that you will spend most of that time with the album.</p>
+        <h3>Views</h3>
+        <p>The application should consist of three views:</p>
+        <ul>
+          <li>Users</li>
+          <li>User details</li> 
+          <li>Album</li>
+        </ul>
+        <p>Each view should be represented in a top bar as a breadcrumb.</p>
+        <h4>Users</h4>
+        <p>The view should contain of two lists; one listing the favorited users and one listing the rest. You should be able to favorite a user by tapping the star in the upper right corner. The list of favorited users should be persisted in the browser.</p>
+        <img src="./images/users.png" alt="Users">
+
+        <h4>User details</h4>
+        <p>Displaying the user's contact information and listing the user's albums.</p>
+        <img src="./images/user-details.png" alt="User details">
+
+        <h4>Album</h4>
+        <p>Listing the photos in the album and showing them in a photo viewer when pressed.</p>
+
+        <p>Please give the bonus tasks a try as well, even if you dont solve them perfectly</p>
+        <p><strong>Bonus:</strong> When the photo viewer is opened/closed, it should animate from/to the position of the screen that the thumbnail is positioned.</p>
+        <p><strong>Bonus #2:</strong> Add more functionality to the photo viewer, for example being able to navigate photos using buttons or keyboard arrows.</p>
+        <p><strong>Bonus #3:</strong> Make the closing animation work when current photo (when closing) is different from the one opened.</p>
+        <img src="./images/album.png" alt="User details">
+        <img src="./images/photo-viewer.png" alt="User details">
+
+        <p>It should be possible to refresh the browser and stay on the same page.</p>
+
+        <hr>
+
+        <h2>Techniques</h2>
+        <p>Use a commonly used framework like React or Vue, or ask us if you want to use something different.</p>
+        <p>CSS preprocessors and HTML templating engines are welcomed to use.</p>
+        <p>Third-party libraries should be kept at a minimum. The photo viewer should not use any external library. 
+          <br/>Although, common third-party libraries as react-router, vue-router and such that are tightly coupled with the framework should be used.
+        </p>
+        <p>You are also allowed to use commonly used state management libraries if you find them useful.</p>
+        <p>If you're unsure about which libraries/frameworks that are okay to use, feel free to ask.</p>
+
+        <hr>
+
+        <h2>Resources</h2>
+        <h4>API</h4>
+        <p>To populate the application with data you will be using the already existing <a href="https://jsonplaceholder.typicode.com">JSONPlacehoder API</a>.</p>
+        <p>You do not need to create any backend to solve the case.</p>
+        <p><i><strong>Heads up:</strong> The route structure under "Routes" can be applied on the other endpoints as well.</i></p>
+
+        <h4>Icons</h4>
+        <p><a href="http://fontawesome.io">Font Awesome</a> can be used for displaying icons:</p>
+        <p><code>&lt;script src="https://use.fontawesome.com/97ba911c72.js"&gt;&lt;/script&gt;</code></p>
+
+
+        <h4>Bootstrap</h4>
+        <p><a href="https://getbootstrap.com">Bootstrap</a> can be used for layouting and the breadcrumbs but not for other design elements like cards and such.</p>
+
+        <hr>
+
+        <h2>Design</h2>
+        <p>The application should look similar to the screenshots, but you are free to make it even more beautiful if you want. ✨</p>
+
+        <hr>
+
+        <h2>Delivery</h2>
+        <p>The application should be delivered as a zip file.</p>
+        <p>Included in the zip file, there should be a README.md with instructions on how to install and start the application, along with any design decisions that you have made and think should be mentioned.</p>
+    </div>
+  </body>
+</html>
