@@ -54,12 +54,12 @@ a {
   margin: 10px;
 }
 
-.task-list {
+.user-list {
   max-width: 640px;
   margin: 20px auto;
 }
 
-.task {
+.user {
   padding: 6px 20px;
   background: #fff;
   margin-top: 20px;
@@ -70,7 +70,7 @@ a {
   align-items: center;
 }
 
-a.task {
+a.user {
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -136,7 +136,6 @@ header .italic-section p {
   width: 200px;
   height: 200px;
   border: #444 2px solid;
-  /* margin: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,24 +178,12 @@ header .italic-section p {
 .alt-titel {
   position: absolute;
   top: calc(50% + 20px);
-  /* set the top position to 50% of the parent + 20px */
   left: 50%;
-  /* set the left position to 50% */
   transform: translateX(-50%);
-  /* shift back by half its own width */
   color: white;
   font-weight: bold;
   z-index: 200;
 }
-
-/* .alt-titel {
-  position: absolute;
-  top: 83%;
-  left: 44vw;
-  color: white;
-  font-weight: bold;
-  z-index: 200;
-} */
 
 .photos .overlay-img {
   position: absolute;

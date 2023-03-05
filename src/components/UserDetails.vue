@@ -1,5 +1,5 @@
 <template>
-  <div class="task">
+  <div class="user">
     <RouterLink class="namninfo" :to="`/user/${empl.id}`">
       <h3>{{ empl.namn }}</h3>
       <h4>{{ empl.company }}</h4>

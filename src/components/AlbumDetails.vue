@@ -1,5 +1,5 @@
 <template>
-  <RouterLink class="task" :to="`/user/${$route.params.userId}/albums/${id}`">
+  <RouterLink class="user" :to="`/user/${$route.params.userId}/albums/${id}`">
     <p> {{ title }}</p>
   </RouterLink>
 </template>
