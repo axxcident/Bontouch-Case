@@ -1,7 +1,7 @@
 <template>
   <div class="user">
     <RouterLink class="namninfo" :to="`/user/${empl.id}`">
-      <h3>{{ empl.namn }}</h3>
+      <h3>{{ capitalize(empl.namn) }}</h3>
       <h4>{{ empl.company }}</h4>
       <h5>{{ empl.namn }}.{{ empl.efter }}{{ empl.email }}</h5>
     </RouterLink>
@@ -22,7 +22,12 @@ export default {
   },
   setup() {
     const EmpStore = useEmployeeStore();
-    return { EmpStore };
+
+    function capitalize(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    return { EmpStore, capitalize };
   }
 }
 </script>

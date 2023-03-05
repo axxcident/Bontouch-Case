@@ -6,14 +6,14 @@
     <RouterLink to="/">Users</RouterLink>
     <div class="userbreadcrumb" v-if="$route.params.userId">
       <p class="spaceslash"> / </p>
-      <RouterLink :to="`/user/${$route.params.userId}`">{{ employees[$route.params.userId - 1].namn }} {{
-        employees[$route.params.userId - 1].efter }}
+      <RouterLink :to="`/user/${$route.params.userId}`">{{ capitalize(employees[$route.params.userId - 1].namn) }} {{
+        capitalize(employees[$route.params.userId - 1].efter) }}
       </RouterLink>
     </div>
     <div class="albumbreadcrumb" v-if="$route.params.albumId">
       <p class="spaceslash"> / </p>
       <RouterLink :to="`/user/${$route.params.userId}/albums/${$route.params.albumId}`">{{
-        albums[$route.params.albumId - 1].title }}</RouterLink>
+        capitalize(albums[$route.params.albumId - 1].title) }}</RouterLink>
     </div>
   </nav>
   <RouterView></RouterView>
@@ -28,7 +28,11 @@ export default {
     const EmpStore = useEmployeeStore()
     const { employees, albums } = storeToRefs(EmpStore)
 
-    return { EmpStore, employees, albums }
+    function capitalize(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    return { EmpStore, employees, albums, capitalize }
   }
 }
 </script>

@@ -1,6 +1,8 @@
 <template>
   <header>
-    <h1>{{ employees[$route.params.userId - 1].namn }} {{ employees[$route.params.userId - 1].efter }}</h1>
+    <h1>{{ capitalize(employees[$route.params.userId - 1].namn) }} {{ capitalize(employees[$route.params.userId -
+      1].efter) }}
+    </h1>
     <div class="italic-section">
       <p>Bontouch AB</p>
       <p>{{ employees[$route.params.userId - 1].namn }}.{{ employees[$route.params.userId - 1].efter }}{{
@@ -27,7 +29,11 @@ export default {
     const EmpStore = useEmployeeStore()
     const { employees, albums } = storeToRefs(EmpStore)
 
-    return { EmpStore, employees, albums }
+    function capitalize(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    return { EmpStore, employees, albums, capitalize }
   }
 }
 </script>
